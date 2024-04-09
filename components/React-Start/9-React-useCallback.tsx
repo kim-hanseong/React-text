@@ -19,6 +19,16 @@
 //* state값이 바뀌면서 app 컴포넌트가 리랜더링 되고 그때마다 onChange로 넘기는 함수가 재생성되고 있기 때문이다. *
 
 //* 값의 메모이제이션을 위해 useMemo를 사용했다면 함수의 메모이제이션을 위해 사용하는것이 useCallback이다 *
+//* useCallback 의 첫번째 인수는 함수 , 두번째 인수는 의존성 배열을 집어넣는다 useMemo와 마찬가지로 의존성 배열이 변경되지 않는 한 *
+//* 함수를 재 생성 하지 않는다 *
+
+//* 이렇게 함수의 재생성을 막아 불필요한 리소스 or 리랜더링을 방지하기 위해 만든것이 useCallback 이다. *
+
+//*** useCallback 은 useMemo를 사용해서 구현 할 수 있다 !? ***
+//* Memo 와 Callback 의 차이점은 메모이제이션을 하는 대상이 변수 or 함수 냐의 차이일 뿐이기에 다를것은 없지만 변동을 야기하지 않게 해준다 *
+//* Callback 은 함수만 가능하며 memo 로 주기위해선 return()=>{} 처럼 함수 선언문을 사용해야한다. *
+
+
 
 // import React, { useRef, useState, useMemo, useCallback } from 'react';
 // import UserList from './UserList';

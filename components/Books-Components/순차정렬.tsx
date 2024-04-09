@@ -76,5 +76,3 @@
 //                                         <TableColumn>utill</TableColumn>
 //                                     </TableHeader>
 
-  useEffect(() => {
-  }, []);
